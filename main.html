@@ -33,11 +33,11 @@
         <!-- STAGE1問題セクション　ここから -->
         <section class="section">
           <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：1</span>さぁゲームを始めよう！</h2>
-            <p class="text-center">まずは、この電車を調べよう。<br>
-              窓の外は真っ暗で何も見えない。車内広告もどれも文字化けしていて読むことが出来ない。<br>
-              ん...? 一つ読める車内広告がある。ちょっと見てみよう。（会話形式にしても良い）</p>
-            <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：1</span>車内広告</h2>
+            <p class="text-left">「電車をちょっと見てみたけど、外真っ暗で車内広告もどれも文字化けしてて読めなくなってる」<br>
+              「ドアも開きそうにないけど、鍵穴があったから鍵があればもしかしたら行けるのかも？」
+              <br>
+              「あれ、１つだけ読めるのがあったから写真送るね」</p>
   
             <div class="container">
               <figure class="image__container">
@@ -85,12 +85,12 @@ Youtube貼り付けここまで -->
         <section v-if="clear['stage1']" v-bind:class="{isClear:clear['stage1']}"  class="section section--clear bg-color--gray">
           <div class="container">
             <div class="clear-message">
-              <div class="clear-message__title">STAGE：１  クリア！</div>
-              <div class="clear-message__content">言われたとおりブラインドの裏を見てみると鍵が隠されていた。<br>
-                これをドアの鍵穴に差し込んでみた。<br>
-                すると扉が開き駅に降り立つことが出来た。<br>
-                （ストーリーの大まかな流れはこんな感じ。会話っぽくしてもいい。）</div>
-              <button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+              <div class="clear-message__title">STAGE：１ 車内広告 クリア！</div>
+              <div class="clear-message__content">「ありがとう！ブラインド見てみる！」<br>
+                「ブラインドの裏に鍵があったからドアの鍵開けてみるね」
+                <br>
+                「無事駅に降りられたよ！でも駅に誰もいないみたい...」</div>
+              <button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次へ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
         </section>
@@ -108,10 +108,12 @@ Youtube貼り付けここまで -->
         <section>
           <div class="section">
             <div class="container">
-              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>黒板に書かれている謎を解け！</h2>
-              <p class="text-center">家庭科室に入ることができた！<br>
-                すぐに目に入ったのは黒板にある４つの謎。<br>
-                これらを解くことで、きっと次のステップに繋がるはずだ！</p>
+              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>電車を呼ぶ</h2>
+              <p class="text-center">そのあと特に返事がないが探索をしているのだろうか...</p>
+                
+              <p class="text-left">「駅員室に行って人がいないか見てみたけどやっぱり誰もいなくて」<br>
+                「でもメモがあってそこに『つぎ迷い込んだひとへ　ポイントを切り替えるレバーを動かして　来た電車に乗れば逃げれる』って書いてあったから」<br>
+                「ポイント？のある部屋に行ったら扉が閉まっててこの紙が落ちてたの」</p>
             </div>
           </div>
           <div class="stage-column__container section bg-color--keycolor">
@@ -182,10 +184,9 @@ Youtube貼り付けここまで -->
         <section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
           <div class="container">
             <div class="clear-message">
-              <div class="clear-message__title">STAGE：2　クリア！</div>
-              <div class="clear-message__content">黒板の指示に従い、<br>
-                次のステージの謎を解こう！</div>
-                <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+              <div class="clear-message__title">STAGE：2　電車を呼ぶ　クリア！</div>
+              <div class="clear-message__content">これで電車来るはず...！</div>
+                <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次へ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
         </section>
@@ -199,7 +200,7 @@ Youtube貼り付けここまで -->
         <!-- STAGE3-1問題セクション　ここから -->
         <section class="section">
           <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>家庭科室の課題とは</h2>
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>電車に乗るために</h2>
             <p class="text-center">黒板から得たメッセージは、「食物の廃棄問題」だった。<br>
               どうやら、廃棄にかかる費用がかかりすぎて小学校の運営が厳しくなったようだ。。<br>
               これらを解決するための最後の謎を解いていこう！</p>

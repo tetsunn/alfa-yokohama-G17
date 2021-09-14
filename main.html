@@ -37,7 +37,7 @@
             <p class="text-left">「電車をちょっと見てみたけど、外真っ暗で車内広告もどれも文字化けしてて読めなくなってる」<br>
               「ドアも開きそうにないけど、鍵穴があったから鍵があればもしかしたら行けるのかも？」
               <br>
-              「あれ、１つだけ読めるのがあったから写真送るね」</p>
+              「あれ、１つだけ読める車内広告があったから写真送るね」</p>
   
             <div class="container">
               <figure class="image__container">
@@ -86,10 +86,11 @@ Youtube貼り付けここまで -->
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">STAGE：１ 車内広告 クリア！</div>
-              <div class="clear-message__content">「ありがとう！ブラインド見てみる！」<br>
-                「ブラインドの裏に鍵があったからドアの鍵開けてみるね」
-                <br>
-                「無事駅に降りられたよ！でも駅に誰もいないみたい...」</div>
+              <div class="text-center">答えを送信するとすぐ返事があった</div>
+              <div class="text-left">「ありがとう！ブラインド見てみる！」<br> 
+                「ブラインドの裏に鍵があったからドアの鍵開けてみるね」 <br> 
+                「無事駅に降りられたよ！でも駅もなんか変な感じ」</div>
+              <div class="text-center">これはまだ続きそうだ</div>
               <button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次へ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
@@ -108,12 +109,15 @@ Youtube貼り付けここまで -->
         <section>
           <div class="section">
             <div class="container">
-              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>電車を呼ぶ</h2>
+              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>駅の中</h2>
               <p class="text-center">そのあと特に返事がないが探索をしているのだろうか...</p>
                 
-              <p class="text-left">「駅員室に行って人がいないか見てみたけどやっぱり誰もいなくて」<br>
-                「でもメモがあってそこに『つぎ迷い込んだひとへ　ポイントを切り替えるレバーを動かして　来た電車に乗れば逃げれる』って書いてあったから」<br>
-                「ポイント？のある部屋に行ったら扉が閉まっててこの紙が落ちてたの」</p>
+              <p class="text-left">「ごめんごめん！ちょっと駅探索してた」<br>
+                「駅の外は真っ暗で一度出たら戻れそうになくて、」<br>
+                「駅の中は何もなかったけど1つ閉まってる扉があって、なんか文字入力できそう！」<br>
+                「あとこの紙も落ちてたからちょっと見て」</p>
+              <!--ここにデイジーの花とかの話を出して伏線立てても良い-->
+              
             </div>
           </div>
           <div class="stage-column__container section bg-color--keycolor">
@@ -136,6 +140,7 @@ Youtube貼り付けここまで -->
                   <figure class="image__container">
                     <img src="assets/images/mondai2.jpeg" alt="問題2">
                   </figure>
+                  
                   <!-- STAGE2-1問題セクション　ここまで -->
                   <!-- STAGE2-1解答入力セクション　ここから -->
                   <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
@@ -184,8 +189,11 @@ Youtube貼り付けここまで -->
         <section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
           <div class="container">
             <div class="clear-message">
-              <div class="clear-message__title">STAGE：2　電車を呼ぶ　クリア！</div>
-              <div class="clear-message__content">これで電車来るはず...！</div>
+              <div class="clear-message__title">STAGE：2　駅の中　クリア！</div>
+              <div class="text-center">きさらぎ..?これを伝えた</div>
+              <div class="text-left">「扉のとこに入力してみるね！」<br>
+              「中にレバーがあったから動かしてみたよ！大丈夫かな？」</div>
+              <div class="text-center">大丈夫なのだろうか</div>
                 <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次へ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
@@ -200,10 +208,8 @@ Youtube貼り付けここまで -->
         <!-- STAGE3-1問題セクション　ここから -->
         <section class="section">
           <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>電車に乗るために</h2>
-            <p class="text-center">黒板から得たメッセージは、「食物の廃棄問題」だった。<br>
-              どうやら、廃棄にかかる費用がかかりすぎて小学校の運営が厳しくなったようだ。。<br>
-              これらを解決するための最後の謎を解いていこう！</p>
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>ガタンゴトン・・・</h2>
+            <p class="text-center">ストーリー思いついてないのでまだ途中です！！問題だけ解いてください！</p>
             <figure class="image__container">
               <img src="assets/images/mondai3.jpeg" alt="問題3">
             </figure>
@@ -215,6 +221,7 @@ Youtube貼り付けここまで -->
         <section class="section bg-color--keycolor">
           <div class="container">
             <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>キーワードを入力</h2>
+            <p class="text-center">「白黒」のように漢字だけで答えてください</p>
             <!-----------------------------------------------------------------------------------------------------------------
               解答入力欄のコンポーネントです。
               v-on:answer-input="answerInput($event, 'stage3', 1, 'final')" は送信ボタンをクリックした時の動作を決める関数です。
